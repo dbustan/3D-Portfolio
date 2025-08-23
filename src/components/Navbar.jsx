@@ -63,7 +63,7 @@ const Navbar = () => {
                     </List>
                 </Links>
                 <Icons>
-                    <Icon src={"/search.png"}/>
+                    <Icon src={"docs/search.png"}/>
                     <Button>Hire Now</Button>
                 </Icons>
             </Container>
