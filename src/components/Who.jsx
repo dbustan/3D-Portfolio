@@ -67,7 +67,7 @@ const Who = () => {
                 <Right>
                     <Title>What if you looked away?</Title>
                     <WhatWeDo>
-                        <Line src="/line.png"/>
+                        <Line src="./line.png"/>
                         <Subtitle>Who I Am</Subtitle>
                     </WhatWeDo>
                     <Desc>A Game Developer with a passion to innovate.</Desc>

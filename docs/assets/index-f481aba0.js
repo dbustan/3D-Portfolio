@@ -74,7 +74,7 @@ Error generating stack: `+o.message+`
     border: none;
     border-radius: 5px;
     cursor: pointer;
-`,Am=()=>M($m,{children:Be(Im,{children:[M(Om,{children:Be(Dm,{children:[M(rl,{children:"Home"}),M(rl,{children:"Studio"}),M(rl,{children:"Works"}),M(rl,{children:"Contact"})]})}),Be(jm,{children:[M(Mm,{src:"/search.png"}),M(Fm,{children:"Hire Now"})]})]})}),Um=L.div`
+`,Am=()=>M($m,{children:Be(Im,{children:[M(Om,{children:Be(Dm,{children:[M(rl,{children:"Home"}),M(rl,{children:"Studio"}),M(rl,{children:"Works"}),M(rl,{children:"Contact"})]})}),Be(jm,{children:[M(Mm,{src:"./search.png"}),M(Fm,{children:"Hire Now"})]})]})}),Um=L.div`
  height: 100vh;
  scroll-snap-align: center;
  display: flex;
@@ -117,7 +117,7 @@ Error generating stack: `+o.message+`
 `,Xm=L.div`
    flex: 3;
    position: relative; 
-`,Zm=()=>Be(Um,{children:[M(Am,{}),Be(Bm,{children:[Be(Wm,{children:[M(Hm,{children:"Follow Your Dreams."}),Be(Vm,{children:[M(Qm,{src:"/line.png"}),M(Ym,{children:"What I Do"})]}),M(Km,{children:"I enjoy creating unique and interactive experiences."}),M(Gm,{children:"Learn more"})]}),M(Xm,{})]})]}),Jm=L.div`
+`,Zm=()=>Be(Um,{children:[M(Am,{}),Be(Bm,{children:[Be(Wm,{children:[M(Hm,{children:"Follow Your Dreams."}),Be(Vm,{children:[M(Qm,{src:"./line.png"}),M(Ym,{children:"What I Do"})]}),M(Km,{children:"I enjoy creating unique and interactive experiences."}),M(Gm,{children:"Learn more"})]}),M(Xm,{})]})]}),Jm=L.div`
  height: 100vh;
  scroll-snap-align: center;
  display: flex;
@@ -159,7 +159,7 @@ Error generating stack: `+o.message+`
     border: none;
     border-radius: 5px;
     cursor: pointer;
-`,u0=()=>M(Jm,{children:Be(qm,{children:[M(bm,{}),Be(t0,{children:[M(e0,{children:"What if you looked away?"}),Be(n0,{children:[M(r0,{src:"/line.png"}),M(l0,{children:"Who I Am"})]}),M(o0,{children:"A Game Developer with a passion to innovate."}),M(i0,{children:"See My Works"})]})]})}),s0=L.div`
+`,u0=()=>M(Jm,{children:Be(qm,{children:[M(bm,{}),Be(t0,{children:[M(e0,{children:"What if you looked away?"}),Be(n0,{children:[M(r0,{src:"./line.png"}),M(l0,{children:"Who I Am"})]}),M(o0,{children:"A Game Developer with a passion to innovate."}),M(i0,{children:"See My Works"})]})]})}),s0=L.div`
     height: 100vh;
     scroll-snap-align: center;
 `;L.div`
