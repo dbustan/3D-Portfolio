@@ -188,7 +188,7 @@ Error generating stack: `+o.message+`
     overflow-y: auto;
     scrollbar-width: none;
     color: white;
-    background: url("/bg.jpeg");
+    background-color: #3797ac;
 
     &::-webkit-scrollbar {
         display: none;
