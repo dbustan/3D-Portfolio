@@ -82,7 +82,7 @@ const Hero = () => {
                 <Left>
                     <Title>Follow Your Dreams.</Title>
                     <WhatWeDo>
-                        <Line src="/img/line.png"/>
+                        <Line src="/line.png"/>
                         <Subtitle>What I Do</Subtitle>
                     </WhatWeDo>
                     <Desc>I enjoy creating unique and interactive experiences.</Desc>
