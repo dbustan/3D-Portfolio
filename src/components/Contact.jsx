@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useRef, useState} from 'react';
+import emailjs from '@emailjs/browser';
 import styled from "styled-components";
 
 const  Section = styled.div`
@@ -51,17 +52,40 @@ const  Button = styled.button`
     border-radius: 5px;
     padding: 20px
 `
+
+
 const Contact = () => {
+    const ref = useRef()
+    const [success,  setSuccess] = useState(false)
+
+    const handleSend = (e) => {
+        e.preventDefault();
+        emailjs
+            .sendForm('service_2rwzp5a', 'template_zz3cznq', ref.current, {
+                publicKey: '4tiStCg2z6drDLNd2',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                    setSuccess(true);
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                    setSuccess(false);
+                },
+            );
+    };
     return (
         <Section>
             <Container>
                 <Center>
-                    <Form>
+                    <Form ref ={ref} onSubmit={handleSend}>
                         <Title>Reach Me</Title>
-                        <Input placeholder = "Name"/>
-                        <Input placeholder = "Email"/>
-                        <TextArea placeholder = "Write your message" rows={10}/>
+                        <Input placeholder = "Name" name="name"/>
+                        <Input placeholder = "Email" name= "email"/>
+                        <TextArea placeholder = "Write your message" name = "message" rows={10}/>
                         <Button>Send</Button>
+                        {success && "Your message has been sent. Will respond soon!"}
                     </Form>
                 </Center>
             </Container>
