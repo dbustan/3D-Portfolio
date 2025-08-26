@@ -81,7 +81,7 @@ const  Right = styled.div`
 const Hero = () => {
     return (
         <Section>
-            <Navbar />
+            {/*<Navbar />*/}
             <Container>
                 <Left>
                     <Title>Follow Your Dreams.</Title>
@@ -94,7 +94,7 @@ const Hero = () => {
                 </Left>
                 <Right>
                     <Canvas camera={{fov:50, position: [30,5, 5]}}>
-                        <OrbitControls enableZoom={false} mouseButtons={{
+                        <OrbitControls enableZoom={false} autoRotate={true} mouseButtons={{
                             LEFT: THREE.MOUSE.ROTATE,
                             RIGHT: null,
                         }}/>

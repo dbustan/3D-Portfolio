@@ -2,15 +2,22 @@ import React from 'react'
 import styled from "styled-components";
 
 const  Section = styled.div`
- display: flex;
- justify-content: center;   
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    background-color: darkslategrey;
+    justify-content: center;   
+    align-items: center;
+    z-index: 1000;
+    
 `
 const Container = styled.div`
     width: 1400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0px;
+    padding: 20px 0px;
 `
 const Links = styled.div`
     display: flex;
@@ -42,7 +49,7 @@ const Icons = styled.div`
 const Button = styled.button`
     width: 100px;
     padding: 10px;
-    background-color: #3a17d8;
+    background-color: rgba(79, 49, 214, 0.63);
     color: white;
     border: none;
     border-radius: 5px;
@@ -58,7 +65,6 @@ const Navbar = () => {
                     <List>
                       <ListItem>Home</ListItem>
                       <ListItem>Works</ListItem>
-                      <ListItem>Contact</ListItem>
                     </List>
                 </Links>
                 <Icons>

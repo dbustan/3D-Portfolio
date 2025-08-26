@@ -4,6 +4,7 @@ import Works from "./components/Works.jsx";
 import Contact from "./components/Contact.jsx";
 import Test from "./components/Test.jsx";
 import styled from "styled-components";
+import Navbar from "./components/Navbar.jsx";
 
 const  Container = styled.div`
     height: 100vh;
@@ -23,9 +24,10 @@ function App() {
 
   return (
     <Container>
+        <Navbar/>
+        <Works/>
         <Hero/>
         <Who/>
-        <Works/>
         <Contact/>
         {/*<Test/>*/}
     </Container>

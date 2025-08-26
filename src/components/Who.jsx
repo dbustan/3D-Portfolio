@@ -5,6 +5,7 @@ import {OrbitControls, PerspectiveCamera} from "@react-three/drei";
 
 import PermanenceCube from "./PermanenceCube.jsx";
 import * as THREE from "three";
+import Navbar from "./Navbar.jsx";
 
 
 
@@ -68,6 +69,7 @@ const  Button = styled.button`
 const Who = () => {
     return (
         <Section>
+
             <Container>
                 <Left>
                     <Canvas camera={{fov:25, position: [5,5, 5]}}>

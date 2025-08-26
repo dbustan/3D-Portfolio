@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
+import Navbar from "./Navbar.jsx";
 
 const data = [
     "Game Development",
@@ -71,6 +72,7 @@ const  Right = styled.div`
 const Works = () => {
     return (
         <Section>
+
             <Container>
                 <Left>
                     <List>
