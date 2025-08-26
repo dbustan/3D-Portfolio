@@ -20,7 +20,7 @@ const  Center = styled.div`
 `
 
 const  Title = styled.h1`
-    font-weight: 200;
+    
 `
 
 const  Form = styled.form`

@@ -1,6 +1,10 @@
 import React from 'react'
 import styled from "styled-components";
 import Navbar from "./Navbar";
+import {OrbitControls, PerspectiveCamera} from "@react-three/drei";
+import * as THREE from "three";
+import StormTurret from "./StormTurret.jsx";
+import {Canvas} from "@react-three/fiber";
 
 
 const  Section = styled.div`
@@ -89,8 +93,19 @@ const Hero = () => {
                     <Button>Learn more</Button>
                 </Left>
                 <Right>
-                    {/*3D Model*/}
-                    {/*<Img src= "/img/moon.png"/>*/}
+                    <Canvas camera={{fov:50, position: [30,5, 5]}}>
+                        <OrbitControls enableZoom={false} mouseButtons={{
+                            LEFT: THREE.MOUSE.ROTATE,
+                            RIGHT: null,
+                        }}/>
+
+                        <ambientLight intensity = {0.5}/>
+                        <directionalLight pos={[3,2,1]}/>
+                        <StormTurret pos={[10,2,1]}>
+                            <meshToonMaterial color="lightblue"/>
+                            <PerspectiveCamera makeDefault position ={[0, 0, 5]}/>
+                        </StormTurret>
+                    </Canvas>
                 </Right>
             </Container>
         </Section>
