@@ -1,5 +1,9 @@
 import React from 'react'
 import styled from "styled-components";
+import {Canvas} from "@react-three/fiber";
+import {OrbitControls, PerspectiveCamera} from "@react-three/drei";
+import PermanenceCube from "./PermanenceCube.jsx";
+
 
 
 
@@ -63,7 +67,21 @@ const Who = () => {
     return (
         <Section>
             <Container>
-                <Left></Left>
+                <Left>
+                    <Canvas camera={{fov:25, position: [5,5, 5]}}>
+                        <OrbitControls enableZoom={false} autoRotate={true}/>
+                        <ambientLight intensity = {0.5}/>
+                        <directionalLight pos={[3,2,1]}/>
+                        <PermanenceCube>
+                            <meshToonMaterial color="lightblue"/>
+                            <PerspectiveCamera makeDefault position ={[0, 0, 5]}/>
+                        </PermanenceCube>
+                        {/*<mesh>*/}
+                        {/*    <boxGeometry args={[1,1,1]}/>*/}
+                        {/*    <meshToonMaterial color="lightblue"/>*/}
+                        {/*</mesh>*/}
+                    </Canvas>
+                </Left>
                 <Right>
                     <Title>What if you looked away?</Title>
                     <WhatWeDo>
