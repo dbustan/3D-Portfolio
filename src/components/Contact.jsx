@@ -44,7 +44,7 @@ const  TextArea = styled.textarea`
 `
 
 const  Button = styled.button`
-    background-color: #7437e6;
+    background-color: rgba(79, 49, 214, 0.63);
     color: white;
     border: none;
     font-weight: bold;

@@ -26,10 +26,10 @@ function App() {
     <Container>
         <Navbar/>
         <Works/>
-        <Hero/>
+
         <Who/>
-        <Contact/>
-        {/*<Test/>*/}
+        <Hero/>
+        {/*<Contact/>*/}
     </Container>
   )
 }

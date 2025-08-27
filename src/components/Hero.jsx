@@ -13,6 +13,9 @@ const  Section = styled.div`
  display: flex;
  flex-direction: column;
  align-items: center;
+    @media only screen and (max-width: 768px) {
+        height: 200vh;
+    }
 `
 
 const  Container = styled.div`
@@ -20,7 +23,14 @@ const  Container = styled.div`
  scroll-snap-align: center;
  width: 1400px;
  display: flex;
- justify-content: space-between;   
+ justify-content: space-between;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 `
 const  Left = styled.div`
     flex: 2;
@@ -28,9 +38,19 @@ const  Left = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    @media only screen and (max-width: 768px) {
+        flex: 1;
+        align-items: center;
+    }
 `
 const  Title = styled.h1`
     font-size: 74px;
+    
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+        padding-top: 0px;
+        font-size: 54px;
+    }
 `
 const  WhatWeDo = styled.div`
     display: flex;
@@ -46,9 +66,13 @@ const  Subtitle = styled.h2`
 const  Desc = styled.p`
     font-size: 24px;
     color: lightgray;
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+        font-size: 20px;
+    }
 `
 const  Button = styled.button`
-    background-color: #3a17d8;
+    background-color: rgba(79, 49, 214, 0.63);
     color: white;
     font-weight: 500;
     width: 100px;
@@ -60,7 +84,11 @@ const  Button = styled.button`
 
 const  Right = styled.div`
    flex: 3;
-   position: relative; 
+   position: relative;
+    @media only screen and (max-width: 768px) {
+        flex: 1;
+        display: none;
+    }
 `
 // const  Img = styled.img`
 //    width: 800px;

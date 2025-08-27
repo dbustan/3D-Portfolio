@@ -54,7 +54,7 @@ const  Desc = styled.p`
     color: lightgray;
 `
 const  Button = styled.button`
-    background-color: #391df1;
+    background-color: rgba(79, 49, 214, 0.63);
     color: white;
     font-weight: 500;
     width: 100px;

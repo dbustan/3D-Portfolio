@@ -7,8 +7,8 @@ const StormTurret = () => {
     const baseGem =  useLoader(FBXLoader, './baseGem.fbx');
     return (
         <group>
-            <primitive object = {pyramid} scale={0.007}/>
-            <primitive object = {baseGem} scale={0.01}/>
+            <primitive object = {pyramid} scale={0.008}/>
+            <primitive object = {baseGem} scale={0.009}/>
         </group>
     )
 }

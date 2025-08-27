@@ -4,7 +4,6 @@ import Navbar from "./Navbar.jsx";
 
 const data = [
     "Game Development",
-    "Web Development",
     "Music",
     "Visuals"
 ];
@@ -14,23 +13,42 @@ const  Section = styled.div`
     scroll-snap-align: center;
     display: flex;
     justify-content: center;
+    
 `
 const  Container = styled.div`
     width: 1400px;
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width: 768px) {
+        padding-top: 200px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center; /* Center the flex items horizontally */
+        justify-content: center; /* Center the flex items vertically */
+    }
 `
 const  Left = styled.div`
     flex: 1;
     display: flex;
     align-items: center;
-    
+
+    @media only screen and (max-width: 768px) {
+        padding: 20px;
+        //justify-content: center;
+        
+    }
+
 `
 const  List = styled.ul`
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
+    @media only screen and (max-width: 768px) {
+        padding: 20px;
+        //justify-content: center;
+        align-items: center;
+    }
 `
 const  ListItem = styled.li`
     font-size: 85px;
@@ -40,8 +58,12 @@ const  ListItem = styled.li`
     //-webkit-text-stroke: 1px white;
     position: relative;
     white-space: nowrap;
+    @media only screen and (max-width: 768px) {
+        font-size: 38px; /* Adjust font size for mobile */
+        color: white;
+    }
 
-    &::after {
+        &::after {
         content: "${(props) => props.text}";
         position: absolute;
         top: 0;
