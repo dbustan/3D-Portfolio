@@ -131,31 +131,31 @@ const Projects = () => {
                         <ProjectLink  href= "https://www.youtube.com/watch?v=a_KbeeSpZGU&pp=ygUPYWxvbmUgY29vbG51c2hp" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <ProjectItem>
 
-                            <ProjectImage src="/alone.png" alt="Song 1" />
+                            <ProjectImage src="./alone.png" alt="Song 1" />
                             <ProjectName>Alone</ProjectName>
                         </ProjectItem>
                         </ProjectLink>
                         <ProjectLink  href= "https://www.youtube.com/watch?v=j1HqWT4MG08&pp=ygUWbGV2ZWwgIHN0YXJ0IGNvb2xudXNoaQ%3D%3D" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <ProjectItem>
-                            <ProjectImage src="/levelstart.png" alt="Song 2" />
+                            <ProjectImage src="./levelstart.png" alt="Song 2" />
                             <ProjectName>Level Start</ProjectName>
                         </ProjectItem>
                         </ProjectLink>
                         <ProjectLink  href= "https://www.youtube.com/watch?v=ny3h5odL6FI&pp=ygUPd2hvYSAgY29vbG51c2hp" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <ProjectItem>
-                            <ProjectImage src="/whoa.png" alt="Song 2" />
+                            <ProjectImage src="./whoa.png" alt="Song 2" />
                             <ProjectName>Whoa</ProjectName>
                         </ProjectItem>
                         </ProjectLink>
                         <ProjectLink  href= "https://shadowhandstudios.itch.io/storm-base" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <ProjectItem>
-                            <ProjectImage src="/sb.png" />
+                            <ProjectImage src="./sb.png" />
                             <ProjectName>StormBase Soundtrack and Sounds</ProjectName>
                         </ProjectItem>
                         </ProjectLink>
                         <ProjectLink  href= "https://store.steampowered.com/app/2928200/Permanence_Break/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <ProjectItem>
-                            <ProjectImage src="/permanenceicon.png" alt="Song 2" />
+                            <ProjectImage src="./permanenceicon.png" alt="Song 2" />
                             <ProjectName>Permanence Break Soundtrack and Sounds</ProjectName>
 
                         </ProjectItem>
