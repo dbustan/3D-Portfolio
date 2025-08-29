@@ -4,19 +4,33 @@ import styled from "styled-components";
 
 const  Section = styled.div`
     height: 100vh;
-    
-    scroll-snap-align: center;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    color: white;
+    background-color: #3797ac;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 `
 const  Container = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
+    @media only screen and (max-width: 768px) {
+        
+    }
 `
 const  Center = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media only screen and (max-width: 768px) {
+        
+    }
 `
 
 const  Title = styled.h1`
@@ -28,6 +42,12 @@ const  Form = styled.form`
     display: flex;
     flex-direction: column;
     gap: 25px;
+    @media only screen and (max-width: 768px) {
+        width: 100%; 
+        max-width: 500px; 
+        gap: 20px; 
+        padding: 20px; 
+    }
 `
 const  Input = styled.input`
     padding: 20px;

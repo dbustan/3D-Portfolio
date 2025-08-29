@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
+import {Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const  Section = styled.div`
     position: fixed;
@@ -10,6 +12,7 @@ const  Section = styled.div`
     justify-content: center;   
     align-items: center;
     z-index: 1000;
+    color: white;
 
     @media only screen and (max-width: 768px) {
         width: 100%;
@@ -42,7 +45,7 @@ const List = styled.ul`
     gap: 20px;
     list-style: none;
     @media only screen and (max-width: 768px) {
-        display: none;
+      
     }
 `
 const ListItem = styled.li`
@@ -67,22 +70,35 @@ const Button = styled.button`
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    @media only screen and (max-width: 768px) {
+        padding: 20px;
+    }
 `
 
 const Navbar = () => {
+    const navigate = useNavigate();
     return (
         <Section>
             <Container>
                 <Links>
                     {/*)<Logo src ="./img/logo.png"/>*/}
                     <List>
-                      <ListItem>Home</ListItem>
-                      <ListItem>Works</ListItem>
+                      <ListItem>
+                          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                          Home
+                          </Link>
+                      </ListItem>
+                      <ListItem>
+                          <Link to="/projects" style={{ textDecoration: 'none', color: 'inherit' }}>
+                              Works
+                          </Link>
+                      </ListItem>
+
                     </List>
                 </Links>
                 <Icons>
-                    <Icon src={"./search.png"}/>
-                    <Button>Contact</Button>
+
+                    <Button onClick={() => navigate('/contact')}>Contact</Button>
                 </Icons>
             </Container>
         </Section>

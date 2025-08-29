@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from 'react'
 import styled from "styled-components";
 import {Canvas} from "@react-three/fiber";
 import {OrbitControls, PerspectiveCamera} from "@react-three/drei";
-
+import { useNavigate } from "react-router-dom";
 import PermanenceCube from "./PermanenceCube.jsx";
 import * as THREE from "three";
 import Navbar from "./Navbar.jsx";
@@ -12,24 +12,40 @@ import Navbar from "./Navbar.jsx";
 
 const  Section = styled.div`
  height: 100vh;
- scroll-snap-align: center;
+ //scroll-snap-align: center;
  display: flex;
- justify-content: center;   
+ justify-content: center;
+    @media only screen and (max-width: 768px) {
+        height: 100vh; /* Keeps the section tall enough to hold both elements */
+    }
 `
 
 const  Container = styled.div`
  height: 100vh;
- scroll-snap-align: center;
+ //scroll-snap-align: center;
  width: 1400px;
  display: flex;
- justify-content: space-between;   
+ justify-content: space-between;
+    @media only screen and (max-width: 768px) {
+        height: 100vh; /* Revert to 100vh for proper scroll snapping */
+        flex-direction: column; /* Stacks content vertically */
+    }
 `
 const  Left = styled.div`
     flex: 1;
-    
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        height: 100vh;
+        padding-top: 40px;
+    }
 `
 const  Title = styled.h1`
     font-size: 74px;
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+        padding-top: 0px;
+        font-size: 34px;
+    }
 `
 const  Right = styled.div`
    flex: 1;
@@ -37,6 +53,12 @@ const  Right = styled.div`
    flex-direction: column;
    justify-content: center;
    gap: 20px;
+    @media only screen and (max-width: 768px) {
+        height: 50vh;
+        align-items: center; /* Centers text elements on mobile */
+        text-align: center; /* Ensures text is centered */
+        gap: 30px;
+    }
 `
 const  WhatWeDo = styled.div`
     display: flex;
@@ -62,17 +84,24 @@ const  Button = styled.button`
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    @media only screen and (max-width: 768px) {
+        width: 200px;
+        font-size: 24px;
+        Height: 120px;
+    }
 `
 
 
 
 const Who = () => {
+    const navigate = useNavigate();
     return (
+
         <Section>
 
             <Container>
                 <Left>
-                    <Canvas camera={{fov:25, position: [5,5, 5]}}>
+                    <Canvas camera={{fov:25, position: [3,3, 3]}}>
                         <OrbitControls enableZoom={false} autoRotate={true} mouseButtons={{
                         LEFT: THREE.MOUSE.ROTATE,
                         RIGHT: null,
@@ -92,8 +121,8 @@ const Who = () => {
                         <Line src="./line.png"/>
                         <Subtitle>Who I Am</Subtitle>
                     </WhatWeDo>
-                    <Desc>A Game Developer with a passion to innovate.</Desc>
-                    <Button>See My Works</Button>
+                    <Desc>A Game Developer and musician with a passion to innovate.</Desc>
+                    <Button onClick={() => navigate('/projects')}>See My Works</Button>
 
                     {/*3D Model*/}
                     {/*<Img src= "/img/moon.png"/>*/}

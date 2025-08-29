@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from "styled-components";
 import Navbar from "./Navbar.jsx";
+import {Link} from "react-router-dom";
 
 const data = [
-    "Game Development",
-    "Music",
-    "Visuals"
+    { name: "Game Development", path: "/game-development" },
+    { name: "Music", path: "/music"},
+    { name: "Visuals", path: "/visuals"}
 ];
 
 const  Section = styled.div`
@@ -59,11 +60,17 @@ const  ListItem = styled.li`
     position: relative;
     white-space: nowrap;
     @media only screen and (max-width: 768px) {
-        font-size: 38px; /* Adjust font size for mobile */
+        font-size: 38px;
         color: white;
     }
+ 
+    & a {
+        color: white; /* This will set the initial color of the link text */
+        text-decoration: none; /* Removes the underline from the link */
+        position: relative;
+    }
 
-        &::after {
+    & a::after {
         content: "${(props) => props.text}";
         position: absolute;
         top: 0;
@@ -75,8 +82,8 @@ const  ListItem = styled.li`
     }
 
     &:hover {
-        &::after {
-
+        /* Apply the animation to the nested <a> tag's ::after pseudo-element */
+        & a::after {
             animation: moveText 0.2s linear both;
             @keyframes moveText {
                 to {
@@ -99,7 +106,11 @@ const Works = () => {
                 <Left>
                     <List>
                         {data.map((item) => (
-                            <ListItem key={item} text= {item}> {item}</ListItem>
+                            <ListItem key={item.name} text= {item.name}>
+                                <Link to={item.path}>
+                                {item.name}
+                                </Link>
+                            </ListItem>
                         ))}
                     </List>
                 </Left>

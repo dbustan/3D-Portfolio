@@ -5,22 +5,22 @@ import {OrbitControls, PerspectiveCamera} from "@react-three/drei";
 import * as THREE from "three";
 import StormTurret from "./StormTurret.jsx";
 import {Canvas} from "@react-three/fiber";
-
+import { useNavigate } from "react-router-dom";
 
 const  Section = styled.div`
  height: 100vh;
- scroll-snap-align: center;
+ //scroll-snap-align: center;
  display: flex;
  flex-direction: column;
  align-items: center;
     @media only screen and (max-width: 768px) {
-        height: 200vh;
+        height: 100vh;
     }
 `
 
 const  Container = styled.div`
  height: 100vh;
- scroll-snap-align: center;
+ //scroll-snap-align: center;
  width: 1400px;
  display: flex;
  justify-content: space-between;
@@ -49,7 +49,7 @@ const  Title = styled.h1`
     @media only screen and (max-width: 768px) {
         text-align: center;
         padding-top: 0px;
-        font-size: 54px;
+        font-size: 34px;
     }
 `
 const  WhatWeDo = styled.div`
@@ -106,7 +106,8 @@ const  Right = styled.div`
 //
 //    }
 // `
-const Hero = () => {
+const Dreams = () => {
+    const navigate = useNavigate();
     return (
         <Section>
             {/*<Navbar />*/}
@@ -118,7 +119,7 @@ const Hero = () => {
                         <Subtitle>What I Do</Subtitle>
                     </WhatWeDo>
                     <Desc>I enjoy creating unique and interactive experiences.</Desc>
-                    <Button>Learn more</Button>
+                    <Button onClick={() => navigate('/contact')}>Learn more</Button>
                 </Left>
                 <Right>
                     <Canvas camera={{fov:50, position: [30,5, 5]}}>
@@ -139,4 +140,4 @@ const Hero = () => {
         </Section>
     )
 }
-export default Hero
+export default Dreams

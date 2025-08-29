@@ -1,10 +1,11 @@
-import Hero from "./components/Hero.jsx";
+import Dreams from "./components/Dreams.jsx";
 import Who from "./components/Who.jsx";
-import Works from "./components/Works.jsx";
 import Contact from "./components/Contact.jsx";
-import Test from "./components/Test.jsx";
 import styled from "styled-components";
 import Navbar from "./components/Navbar.jsx";
+import  {BrowserRouter as Router,  Routes,   Route } from "react-router-dom";
+import Projects from "./components/Projects.jsx";
+
 
 const  Container = styled.div`
     height: 100vh;
@@ -23,15 +24,23 @@ const  Container = styled.div`
 function App() {
 
   return (
-    <Container>
-        <Navbar/>
-        <Works/>
+      <Router basename="/3D-Portfolio/">
+          <Navbar />
+          <Routes>
+              {/* Route for the main page with all components */}
+              <Route path="/" element={
+                  <Container>
+                      <Who/>
+                      <Dreams/>
+                  </Container>
+              } />
 
-        <Who/>
-        <Hero/>
-        {/*<Contact/>*/}
-    </Container>
-  )
+              {/* Routes for the new pages */}
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+          </Routes>
+      </Router>
+  );
 }
 
-export default App
+export default App;
