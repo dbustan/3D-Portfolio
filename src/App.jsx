@@ -4,7 +4,8 @@ import Who from "./components/Who.jsx";
 import Contact from "./components/Contact.jsx";
 import styled from "styled-components";
 import Navbar from "./components/Navbar.jsx";
-import  {BrowserRouter as Router,  Routes,   Route } from "react-router-dom";
+
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Projects from "./components/Projects.jsx";
 
 
@@ -25,7 +26,7 @@ const  Container = styled.div`
 function App() {
 
   return (
-      <Router basename="/3D-Portfolio/">
+      <Router path="/">
           <Navbar />
           <Routes>
               {/* Route for the main page with all components */}
