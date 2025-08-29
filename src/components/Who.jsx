@@ -121,8 +121,8 @@ const Who = () => {
                         <Line src="./line.png"/>
                         <Subtitle>Who I Am</Subtitle>
                     </WhatWeDo>
-                    <Desc>A Game Developer and musician with a passion to innovate.</Desc>
-                    <Button onClick={() => navigate('/projects')}>See My Works</Button>
+                    <Desc>A Game Developer and Musician with a passion to innovate.</Desc>
+                    <Button onClick={() => navigate('/projects/')}>See My Works</Button>
 
                     {/*3D Model*/}
                     {/*<Img src= "/img/moon.png"/>*/}

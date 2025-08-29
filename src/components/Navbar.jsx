@@ -77,6 +77,9 @@ const Button = styled.button`
 
 const Navbar = () => {
     const navigate = useNavigate();
+    const handleContactClick = () => {
+        navigate('/contact', { replace: true });
+    };
     return (
         <Section>
             <Container>
@@ -89,7 +92,7 @@ const Navbar = () => {
                           </Link>
                       </ListItem>
                       <ListItem>
-                          <Link to="/projects" style={{ textDecoration: 'none', color: 'inherit' }}>
+                          <Link to="/projects/" style={{ textDecoration: 'none', color: 'inherit' }}>
                               Works
                           </Link>
                       </ListItem>
@@ -98,7 +101,7 @@ const Navbar = () => {
                 </Links>
                 <Icons>
 
-                    <Button onClick={() => navigate('/contact')}>Contact</Button>
+                    <Button onClick={handleContactClick}>Contact</Button>
                 </Icons>
             </Container>
         </Section>

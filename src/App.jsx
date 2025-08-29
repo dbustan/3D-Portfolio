@@ -1,5 +1,6 @@
 import Dreams from "./components/Dreams.jsx";
 import Who from "./components/Who.jsx";
+
 import Contact from "./components/Contact.jsx";
 import styled from "styled-components";
 import Navbar from "./components/Navbar.jsx";
@@ -31,13 +32,13 @@ function App() {
               <Route path="/" element={
                   <Container>
                       <Who/>
-                      <Dreams/>
+                      {/*<Dreams/>*/}
                   </Container>
               } />
 
               {/* Routes for the new pages */}
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/projects/" element={<Projects />} />
+              <Route path="/contact/" element={<Contact />} />
           </Routes>
       </Router>
   );

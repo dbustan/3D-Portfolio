@@ -98,7 +98,7 @@ const  Right = styled.div`
 `
 
 
-const Works = () => {
+const Oldworks = () => {
     return (
         <Section>
 
@@ -119,4 +119,4 @@ const Works = () => {
         </Section>
     )
 }
-export default Works
+export default Oldworks
