@@ -120,6 +120,12 @@ const Projects = () => {
                             <ProjectName>StormBase</ProjectName>
                         </ProjectItem>
                         </ProjectLink>
+                        <ProjectLink  href= "https://coolnushi.itch.io/car-jam" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <ProjectItem>
+                            <ProjectImage src="/3D-Portfolio/bentley.png" alt="Game 3" />
+                            <ProjectName>Car Jam</ProjectName>
+                        </ProjectItem>
+                        </ProjectLink>
                     </ProjectList>
                 </CategorySection>
 
@@ -156,9 +162,9 @@ const Projects = () => {
                         <ProjectItem>
                             <ProjectImage src="/3D-Portfolio/permanenceicon.png" alt="Song 2" />
                             <ProjectName>Permanence Break Soundtrack and Sounds</ProjectName>
-
                         </ProjectItem>
                         </ProjectLink>
+                        
                     </ProjectList>
                 </CategorySection>
 
