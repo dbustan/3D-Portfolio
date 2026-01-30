@@ -108,7 +108,6 @@ const Projects = () => {
                     <Title>Games</Title>
                     <ProjectList>
                         <ProjectLink  href= "https://store.steampowered.com/app/2928200/Permanence_Break/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        {/* Example entry for a game */}
                         <ProjectItem>
                             <ProjectImage src="/3D-Portfolio/permanenceicon.png" alt="Game 1" />
                             <ProjectName>Permanence Break</ProjectName>
